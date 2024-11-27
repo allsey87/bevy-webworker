@@ -1,0 +1,51 @@
+[package]
+name = "worker"
+version = "0.1.0"
+license = "MIT"
+edition = "2021"
+
+[dependencies]
+# crate dependencies
+bevy_app = { version = "0.13.2", default-features = false }
+bevy_asset = { version = "0.13.2", default-features = false }
+bevy_core = { version = "0.13.2", default-features = false }
+bevy_core_pipeline = { version = "0.13.2", default-features = false, features = ["webgl", "tonemapping_luts"] }
+bevy_diagnostic = { version = "0.13.2", default-features = false }
+bevy_ecs = { version = "0.13.2", default-features = false }
+bevy_gizmos = { version = "0.13.2", default-features = false, features = ["webgl", "bevy_pbr"] }
+bevy_gltf = { version = "0.13.2", default-features = false }
+bevy_hierarchy = { version = "0.13.2", default-features = false }
+bevy_input = { version = "0.13.2", default-features = false }
+bevy_math = { version = "0.13.2", default-features = false }
+bevy_pbr = { version = "0.13.2", default-features = false, features = ["webgl"] }
+bevy_render = { version = "0.13.2", default-features = false, features = ["webgl", "png"] }
+bevy_scene = { version = "0.13.2", default-features = false }
+bevy_time = { version = "0.13.2", default-features = false }
+bevy_transform = { version = "0.13.2", default-features = false }
+bevy_window = { version = "0.13.2", default-features = false }
+# third-party bevy crates
+bevy_eventlistener = { version = "0.7" }
+bevy_rapier3d = { version = "0.25.0", features = ["debug-render-3d"] }
+bevy_mod_picking = { version = "0.18.2", default-features = false, features = ["backend_rapier"] }
+# other crates
+raw-window-handle = { version = "0.6.0", features = ["wasm-bindgen-0-2"] }
+thread-safe = { version = "0.1.2" }
+# shared dependencies
+shared = { path = "../shared" }
+# workspace dependencies
+console_error_panic_hook = { workspace = true }
+futures = { workspace = true }
+futures-signals = { workspace = true }
+gloo-timers = { workspace = true }
+gloo-events = { workspace = true }
+js-sys = { workspace = true }
+serde = { workspace = true, features = ["derive"] }
+tracing = { workspace = true }
+tracing-web = { workspace = true }
+tracing-subscriber = { workspace = true }
+once_cell = { workspace = true }
+wasm-bindgen = { workspace = true }
+wasm-bindgen-futures = { workspace = true }
+web-rpc = { workspace = true }
+web-sys = { workspace = true }
+uuid = { workspace = true, features = ["serde", "js", "v4", "v5"] }

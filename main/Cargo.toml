@@ -1,0 +1,17 @@
+[package]
+name = "main"
+version = "0.1.0"
+license = "MIT"
+edition = "2021"
+
+[dependencies]
+shared = { workspace = true }
+gloo-timers = { workspace = true, features = ["futures"] }
+gloo-events = { workspace = true }
+futures-signals = { workspace = true }
+js-sys = { workspace = true }
+web-sys = { workspace = true, features = ["HtmlCanvasElement"] }
+wasm-bindgen = { workspace = true }
+wasm-bindgen-futures = { workspace = true }
+web-rpc = { workspace = true }
+dominator = "0.5.38"
