@@ -32,7 +32,7 @@ if not os.path.islink('output/reset.css'):
 print('Generating bindings')
 subprocess.run([
     "wasm-bindgen",
-    "target/wasm32-unknown-unknown/debug/main.wasm",
+    "target/wasm32-unknown-unknown/release/main.wasm",
     "--out-dir",
     "output",
     "--target",
@@ -41,7 +41,7 @@ subprocess.run([
 ])
 subprocess.run([
     "wasm-bindgen",
-    "target/wasm32-unknown-unknown/debug/worker.wasm",
+    "target/wasm32-unknown-unknown/release/worker.wasm",
     "--out-dir",
     "output",
     "--target",
