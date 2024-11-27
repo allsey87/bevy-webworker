@@ -1,5 +1,5 @@
 
-use dominator::{clone, html, Dom, DomBuilder};
+use dominator::{clone, html};
 use futures_signals::signal::SignalExt;
 use wasm_bindgen::prelude::*;
 use web_sys::HtmlCanvasElement;
